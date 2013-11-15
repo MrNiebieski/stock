@@ -1,0 +1,96 @@
+2013-11-14 17:37:31.507992 INFO: DB: Connection <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:40:47.369745 INFO: User: kav DB: stockmarket DB: Connection <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:41:38.130553 INFO: User - kav DB - stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:53:58.151226 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:54:41.979954 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:55:03.733149 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:55:08.418766 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:55:27.366554 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:56:03.322850 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:56:03.323028 DEBUG: trying to execute query insert into companies (name) values (%s) with vars 123)
+2013-11-14 17:58:23.020181 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:58:23.020349 DEBUG: trying to execute query insert into companies (name) values (%s) with vars 123
+2013-11-14 17:58:23.020472 ERROR: unable to run query insert into companies (name) values (%s) with vars 123 due to error not all arguments converted during string formatting
+2013-11-14 17:59:59.655843 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 17:59:59.656001 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars None
+2013-11-14 17:59:59.656865 ERROR: unable to run query INSERT INTO INDUSTRY (name) values (%s); with vars None due to error syntax error at or near "%" LINE 1: INSERT INTO INDUSTRY (name) values (%s);                                             ^ 
+2013-11-14 18:01:09.694011 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:01:09.694183 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:01:47.279424 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:01:47.279601 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:01:47.282059 ERROR: unable to run query INSERT INTO INDUSTRY (name) values (%s); with vars ['blahblahsdf'] due to error duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(blahblahsdf) already exists. 
+2013-11-14 18:03:56.839806 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:03:56.839989 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:03:56.842183 ERROR: duplicate key violation %s blahblahsdf duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(blahblahsdf) already exists. 
+2013-11-14 18:04:24.105568 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:04:24.105739 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:04:24.107830 ERROR: duplicate key violation blahblahsdf duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(blahblahsdf) already exists. 
+2013-11-14 18:07:33.622036 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:07:33.622215 DEBUG: trying to execute query INSERT INTO INDUSTRY (name)sdf values (%s); with vars ['blahblahsdf']
+2013-11-14 18:07:33.622877 ERROR: unable to run query INSERT INTO INDUSTRY (name)sdf values (%s); with vars ['blahblahsdf'] due to error syntax error at or near "sdf" LINE 1: INSERT INTO INDUSTRY (name)sdf values ('blahblahsdf');                                    ^  UNHANDLED EXCEPTION: ProgrammingError
+2013-11-14 18:07:48.808939 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:07:48.809123 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:07:48.818943 ERROR: unable to run query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf'] due to error column "namesdfsdf" of relation "industry" does not exist LINE 1: INSERT INTO INDUSTRY (namesdfsdf) values ('blahblahsdf');                               ^  UNHANDLED EXCEPTION: ProgrammingError
+2013-11-14 18:09:10.994504 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:09:10.994674 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:09:34.664957 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:09:34.665129 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:10:15.232806 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:10:15.232985 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:10:15.234115 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:14.454907 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:14.455097 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:14.456410 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:15.417424 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:15.417582 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:15.418877 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:16.097970 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:16.125187 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:16.126599 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:16.650907 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:16.651085 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:16.652209 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:17.152862 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:17.153033 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:17.154319 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:18.635260 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:18.635426 DEBUG: trying to execute query INSERT INTO INDUSTRY (namesdfsdf) values (%s); with vars ['blahblahsdf']
+2013-11-14 18:11:18.636716 ERROR: sql error when running INSERT INTO INDUSTRY (namesdfsdf) values (%s); with values blahblahsdf
+2013-11-14 18:11:44.647892 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:11:44.648064 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:32.691936 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:32.692113 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:32.694329 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:37.299964 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:37.300132 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:37.302690 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:37.937507 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:37.937668 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:37.939906 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:38.538856 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:38.539012 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:38.541414 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:39.186166 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:39.186329 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:39.188611 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:39.860185 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:39.860346 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:39.862299 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:40.581264 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:40.581431 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:40.583402 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:15:41.367915 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:15:41.368090 DEBUG: to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:15:41.370219 ERROR: duplicate key violation software duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:16:43.302844 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:16:43.303014 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:16:43.305224 ERROR: duplicate key violation "software" already exists duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:17:22.158482 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:17:22.158646 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:17:22.160802 ERROR: software already exists duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:18:00.606727 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:18:00.606908 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:18:00.609494 ERROR: "software" already exists duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
+2013-11-14 18:34:29.926654 INFO: created DB connection with user kav db stockmarket <type 'psycopg2._psycopg.connection'>
+2013-11-14 18:34:29.926843 DEBUG: trying to execute query INSERT INTO INDUSTRY (name) values (%s); with vars ['software']
+2013-11-14 18:34:29.928676 ERROR: "software" already exists duplicate key value violates unique constraint "industry_name_key" DETAIL:  Key (name)=(software) already exists. 
