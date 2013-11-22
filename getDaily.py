@@ -14,17 +14,14 @@ import datetime
 def numericInputFixup(input):
     if "K" in str(input):
         output = int(float(input.strip("K")) * 1000)
-#        output = "%0.2f" % output
         log.debug("trying to fixup numeric data %s into %s" % (input, output))
         return output
     elif "M" in str(input):
         output = int(float(input.strip("M")) * 1000000)
- #       output = "%0.2f" % output
         log.debug("trying to fixup numeric data %s into %s" % (input, output))
         return output
     elif "B" in str(input):
         output =  int(float(input.strip("B")) * 1000000000)
-  #      output = "%0.2f" % output
         log.debug("trying to fixup numeric data %s into %s" % (input, output))
         return output
     else:
@@ -32,7 +29,6 @@ def numericInputFixup(input):
         return input
 
 def validate(input):
-    #print input
     if input is None:
         return input
 
@@ -178,7 +174,7 @@ PRICEEPSESTIMATECURRENTYEAR,
 PRICEEPSESTIMATENEXTYEAR)
 VALUES (%s, %s, %s, %s, %s, %s);"""
 
-    historicQuery = """INSERT INTO HISTORICDATA
+    historicQuery = """INSERT INTO HISTORIC_DATA
 (DATE,
 CODE,
 HIGH,
@@ -186,7 +182,7 @@ LOW,
 OPEN,
 CLOSE,
 VOLUME)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s);"""
+VALUES (%s, %s, %s, %s, %s, %s, %s);"""
 
     avgValues = [today, 
                 code, 
@@ -253,12 +249,12 @@ def getDailyData():
 
     for companies in companyCodesPerIndustry:
         companyDataList = pyql.lookup(companies)
-
-        for companyData in companyDataList:
-            insertData(companyData)
-
-
-        sys.exit()
+        
+        try:
+            for companyData in companyDataList:
+                insertData(companyData)
+        except:
+            log.error("no compainies in %s" % str(companies))
 
 def main():
     getDailyData()
