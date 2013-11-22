@@ -14,8 +14,8 @@ import db
 
 def getHistoricInfo(ycode):
     code = ycode.split(".")[0]
-    fromDay = "2000-01-01"
-    #fromDay = "2013-11-19"
+    #fromDay = "2000-01-01"
+    fromDay = "2013-11-21"
     toDay = datetime.datetime.now().strftime("%Y-%m-%d")
     log.info("getting historic [%s - %s] data for %s" % (fromDay, toDay, ycode))
     
@@ -53,7 +53,14 @@ VALUES (%s, %s, %s, %s, %s, %s);"""
 
 def main():
     import sys
-    code = sys.argv[1]
+    try:
+        code = sys.argv[1]
+    except:
+        print "No argument passed\n\nUsage\npython historicData.py CODE.SUFFIX\npython historicData.py CBA.ax"
+        log.error("historicData.py called with no argument")
+        import sys
+        sys.exit(1)
+
     getHistoricInfo(code)
 
 if __name__ == "__main__":
