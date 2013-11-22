@@ -12,7 +12,7 @@ import sys
 
 
 # Global vars
-dbname = "stockmarket"
+dbname = "stockmarket_testing"
 user = "kav"
 
 # Functions
