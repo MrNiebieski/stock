@@ -5,7 +5,7 @@ Logger lib
 Author: Kavin Autar
 Version: 0.1
 Created: 24/10/2013
-Last Modified: 24/10/2013
+Last Modified: 15/11/2013
 
 """
 
