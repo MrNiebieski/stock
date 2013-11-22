@@ -73,12 +73,27 @@ def selectQuery(query, values):
         log.info("executing query: %s" % sqlString)
         isql.execute(query, values)
         returnVal = isql.fetchall()
-        return returnVal
     except Exception as e:
         eType = e.__class__.__name__
         log.error("unable to run query %s error %s" % (sqlString, str(e)), "UNHANDLED EXCEPTION:", eType)
+    finally:    
         conn.close()
 
+    return returnVal
+
+def selectQueryNoWhere(query):
+    conn, isql = dbConn()
+    try:
+        log.info("executing query: %s" % query)
+        isql.execute(query)
+        returnVal = isql.fetchall()
+    except Exception as e:
+        eType = e.__class__.__name__
+        log.error("unable to run query %s error %s" % (sqlString, str(e)), "UNHANDLED EXCEPTION:", eType)
+    finally:
+        conn.close()
+
+    return returnVal
 
 # Main
 

@@ -35,9 +35,7 @@ code		text,
 high		decimal,
 low	    	decimal,
 open		decimal,
-close		decimal,
 volume		decimal,
-adj_volume	decimal,
 PRIMARY KEY (date, code),
 FOREIGN KEY (code) REFERENCES company(code)
 );"

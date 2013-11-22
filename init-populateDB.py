@@ -9,7 +9,7 @@ import logger as log
 import sys
 import db
 import csv
-
+import historicData
 
 def populateIndustry(file):
     log.info("populating INDUSTRY table with data from %s" % file)
@@ -61,7 +61,21 @@ def populateCompanies(file):
             except:
                 log.error("unable to insert %s into company" % companyName)
 
+def populateHistoric():
+    companiesSQLQuery = """SELECT c.code || co.suffix as ycode
+from company c
+join country co on c.country_id = co.id;
+"""
 
+    companies = db.selectQuery(companiesSQLQuery, [])
+    #print companies
+    companyList = []
+    for company in companies:
+        companyList.append(company[0])
+
+    for ycode in companyList:
+        historicData.getHistoricInfo(ycode)
+        
 def main():
     try:
         file = sys.argv[1]
@@ -73,25 +87,9 @@ def main():
     populateIndustry(file)
     populateCountry("Australia", ".ax")
     populateCompanies(file)
+    populateHistoric()
 
 
 if __name__ == "__main__":
     main()
 
-
-
-
-
-"""
-with open (file, 'r') as f:
-    reader = csv.reader(f)
-    companies = [ x for x in reader ]
-
-    for company in companies:
-        print company
-        print type(company), len(company)
-        print company[1]
-
-def
-
-"""
